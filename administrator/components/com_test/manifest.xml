@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>test</name>
+    <author>ali</author>
+    <creationDate>2025-02-11</creationDate>
+    <version>1.0.0</version>
+    <description>Un composant Joomla de base</description>
+    <files>
+        <folder>admin</folder>
+        <folder>site</folder>
+        <folder>language</folder>
+    </files>
+
+    <administration>
+        <menu>Composant test</menu>
+        <files>
+            <file type="administration">admin/controllers/controller.php</file>
+            <!-- <file type="administration">admin/helper.php</file> -->
+            <file type="administration">admin/models/test_model.php</file>
+            <file type="administration">admin/views/test/tmpl/default.php</file>
+            <file type="administration">admin/views/view.html.php</file>
+        </files>
+    </administration>
+
+    <site>
+        <files>
+            <file type="site">site/controllers/controller.php</file>
+            <!-- <file type="site">site/helper.php</file> -->
+            <file type="site">site/models/test_model.php</file>
+            <file type="site">site/views/view.html.php</file>
+            <file type="site">site/views/test/tmpl/default.php</file>
+        </files>
+    </site>
+</extension>

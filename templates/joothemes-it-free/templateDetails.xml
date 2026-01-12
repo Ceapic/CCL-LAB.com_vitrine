@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.5" type="template" method="upgrade">
+	<name>JooThemes-IT-Free</name>
+	<creationDate>November 2018</creationDate>
+	<author>JooThemes.net</author>
+	<copyright>Copyright © 2018 JooThemes.net</copyright>
+	<authorEmail>contact@joothemes.net</authorEmail>
+	<authorUrl>http://www.joothemes.net</authorUrl>
+	<version>Stable 1.0. Commercial Design</version>
+	<description><![CDATA[
+<div style="font-size: 16px; line-height: 1.6; background-color: #F0F0F0; padding: 15px 20px; border: 1px solid #dedede; overflow: hidden;">
+<h1>IT Joomla! 3 Responsive Template - Free version</h1>
+<p><img src="../templates/joothemes-it-free/images/joothemes-it-agency-template.jpg" alt="IT Joomla! 3 Responsive Template" style="padding-right: 20px;" align="left" /> <p><strong>IT Joomla! 3 Responsive Template developed by <a href="http://JooThemes.net" target="_blank">JooThemes.net</a>. <br />Need help to set up your template? Check out the <a href="http://joothemes.net/contact" target="_blank">JooThemes Support</a> page. <br />Download our <a href="http://JooThemes.net/free-joomla-templates" target="_blank">Free Joomla templates</a>. <br />See and buy our <a href="http://joothemes.net/responsive-joomla-templates" target="_blank">Joomla Templates Premium Versions</a>. <br />Copyright © 2017 JooThemes.net - All Rights Reserved</strong>.</p>
+<hr />
+<h2>Buy this template Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here:</h2>
+<p><a class="btn" title="Buy this template with Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here!" href="http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template" target="_blank">Quickstart Package - Buy Now (only 29 USD)</a></p>
+<strong>IT Joomla! 3 Responsive Template - November 2018</strong><br /> Version 1.0<br /> License: Commercial Design &amp; Layout Author: <a href="http://joothemes.net/" target="_blank">http://JooThemes.net</a><br /> Copyright (C) 2017 JooThemes.net All Rights Reserved.<br /> Email: <a href="mailto:contact@joothemes.net">contact@JooThemes.net</a></p>
+<h2>GPL Licensing</h2>
+<p>All JooThemes.net templates are released under the GNU General Public License, version 2 (http://www.gnu.org/licenses/gpl-2.0.html). Specifically, the PHP code portions are distributed under the GPL license. If not otherwise stated, all images, manuals, cascading style sheets, and included JavaScript are NOT GPL, and are released under "JooThemes.net" Proprietary Use License" unless specifically authorized. Elements of the templates released under this proprietary license may not be redistributed or repackaged for use other than those allowed by the Terms of Use.</p>
+<h2>TEMPLATE FEATURES</h2>
+<p>IT Agency - Web Design and Web Development Companies Joomla Template. Joomla! 3 Responsive Template, based on the Master Bootstrap Framework for Joomla! 3.x. The Bootstrap Framework makes it fully responsive to all screen resolutions and aspect ratios. The simplest way to build professional sites. Your imagination and your experience are the limit!</p>
+<h2>IT Agency Joomla! 3 Responsive Template Features:</h2>
+<ul>
+<li>Joomla! 3.x compatible.</li>
+<li>Based on Bootstrap 3.3.5.&nbsp;One framework, every device. Bootstrap easily and efficiently scales your Joomla websites with a single code base, from phones to tablets to desktops with CSS media queries.</li>
+<li>Responsive Mobile-Friendly template for all Joomla 3.x. A responsive layout automatically adapts to the viewing device, allowing for an optimized appearance on multiple devices, such as tablets.</li>
+<li>Sticky pinned main menu, logo and widgets.</li>
+<li>CSS Superfish multi-level dropdown pinned menu<strong>.</strong></li>
+<li>Responsive multi-level menu support, flexible and cross-browser compatibility.</li>
+<li>Tableless design and 100% CSS based.</li>
+<li>Built by advance HTML5 and CSS3.</li>
+<li>Lightweight and fast-loading.</li>
+<li>Logo as Image with configuration parameters.</li>
+<li>Built-in Google Fonts (<strong>more fonts - 650+ available only with Qucikstart Package</strong>).</li>
+<li>Built-in social media icons for the popular social networking sites including Twitter, Facebook, Google Plus, Youtube, LinkedIn and more...</li>
+<li>2 layout options: 2 columns (content + right), 1 column (content).</li>
+<li>Typography Page.</li>
+<li>A lot Module Positions.&nbsp;All module positions are fully collapsible.</li>
+<li>Cross-Browser Support - Transport Joomla template work great with all modern browsers like Firefox, Chrome, Safari, Opera and Internet Explorer 9+.</li>
+<li>Heading: h1, h2, h3, h4 and h5.</li>
+<li>SEO SEF Optimised Layout. Optimized code for Search Engines which helps in SEO.</li>
+<li>SEO Breadcrumbs with Microdata Google - this will give a nice category-display in the Google search results.</li>
+<li>The template has a built-in fast "Back to top" button.</li>
+<li>And more features,&nbsp;some only available in the Premium Version with quickstart package:</li>
+</ul>
+<h2>IT Agency Joomla Template Quickstart Instalation Package</h2>
+<h3>What is quickstart package?</h3>
+<p>"Quickstart Package" is a IT Agency Joomla Template + Joomla 3 + all content, all modules, all components and settings used in <strong><a href="http://demo.joothemes.net/joomla3/itagency" target="_blank" rel="noopener noreferrer">demo site</a></strong>.</p>
+<h2>How to install Quickstart package?</h2>
+<p>Quickstart Package install exactly the same as a normal Joomla! installation package. (To get know more about technical requirements to run Joomla! please visit: Joomla technical requirements).</p>
+<p><strong>Quickstart will save your time and work.&nbsp;</strong><strong>You will get exactly the same as demo page <a href="http://demo.joothemes.net/joomla3/itagency">http://demo.joothemes.net/joomla3/itagency</a></strong></p>
+<h2>Quickstart package extra features and modules:</h2>
+<ul>
+<li><strong>Unite Revolution Slider</strong> - an awesome, fully responsive jQuery slider! (<strong>available only with Qucikstart Package - Save $29!</strong>)</li>
+<li><strong>Gallery plugin and module</strong> (<strong>available in Qucikstart Package</strong>).&nbsp;(Sigplus Image Gallery Plus is a straightforward way to add image or photo galleries to a Joomla article with a simple syntax. It takes a matter of minutes to set up a gallery but those who are looking for a powerful gallery solution will not be disappointed either: sigplus is suitable for both beginner and advanced users.</li>
+<li><strong>Built-in 650+ Google Fonts</strong> (<strong>available only with Qucikstart Package</strong>).</li>
+<li><strong>Joomla Custom Fields - IT Agency Portfolio category and additional Joomla fields</strong>. We used additional fields to build the Portfolio category!&nbsp;This is our first Joomla quickstart in which we use Joomla custom fields.</li>
+<li><strong>Extra Fields Gallery Plugin in Portfolio category</strong>. To the standard built-in additional fields in Joomla, we've added extra Fields Gallery Plugin. This plugin lets create new fields of type 'gallery' in the extensions where custom fields are implemented.</li>
+<li><strong>Joomla JUNewsUltra Pro news module</strong> display latest news (Joomla Articles) with full control over all elements, rich backend configs covering layout. auto thumbnail creating, images resizing, numbering articles, sorting etc.&nbsp;Best Joomla module for news, articles, YouTube and RSS with many options. Fast performs and mostly optimization for over 100.000 articles! Make you easy and simple templates! In one module, a greater functionality, which replaces a number of modules. Responsive and Retina image based in srcset browser support for responsive or mobile template! The module has the ability to create different patterns (templates), thus you can change the type of modules as you like and use the module on the news portals, on the portfolio or personal site. (<strong>JUNewsUltra Pro news module and our override template for Clients Testimonials view&nbsp;</strong>available only with Qucikstart Package).</li>
+<li><strong>JWeb Portfolio Display responsive grid module</strong> for Joomla that helps create a portfolio easily with filter, lightbox effect, page details and categories. There are lots of parameters and you can set them easily. This awesome module is responsive and seo optimized. Perfect solution for you to create your own portfolio on Joomla 3.x CMS.</li>
+<li><strong>Itcs TeamCards Module - show on with this module your team</strong>. Choose the colors and style in the back end and create up to 20 team cards in one module. The links can be individually adjusted per card, as well as the orientation of the image. The module and the animations come without javascript, since the effects are made of CSS3. 2 Language Files (EN, DE). Up to 20 Teamcards Responsive presentation. CSS3 animation. Without javascript. Icons changeable (ion-icons). Colors changeable. Automatic crop images.</li>
+<li><strong>Akeeba Backup Core</strong> -&nbsp;is the most widely used open-source backup component for the Joomla! CMS. Its mission is simple: create a site backup that can be restored on any Joomla!-capable server, making it ideal not only for backups but also for site transfers or even deploying sites to your clients' servers. Akeeba Backup creates a full backup of your site in a single archive. The archive contains all the files, a database snapshot and an installer similar in function to the standard Joomla! installer.</li>
+<li><strong>AcyMailing Starter</strong>. Improve your web communication on your Joomla website! Great all in one sollution for mailing in Joomla website.&nbsp;AcyMailing is a reliable Newsletter and email marketing extension for Joomla.<br />It enables you to efficiently manage an unlimited number of subscribers, organize them into mailing lists, send personalized newsletters and more...</li>
+<li><strong>JCE editor - the best WYSiWYG editor for Joomla! </strong>An award-winning, configurable WYSIWYG editor for Joomla! based on Moxiecode's TinyMCE. Includes advanced Image, File and Link handling, plugin support, and an Administration interface for editor configuration.</li>
+<li><strong>Extra SEO SEF plugin - EFSEO -</strong>&nbsp;automatically generates description meta tags by pulling text from the content to help with SEO. It also gives you the ability to set different title configurations. EFSEO is a SEO extension for Joomla! with which you can control all important metadata manually and automatically. The handling of the metadata in Joomla! has never been so easy!&nbsp;With the plugin you may change and add meta information (title, description, keywords, generator and robots) easily in the frontend and with the component in the backend. It does not matter which component you use. The plugin is active on every page of a Joomla! website and may be used correspondingly.</li>
+-&nbsp;Integrate your Joomla website into the Open Graph Protocol. The Open Graph Protocol enables you to integrate your Web pages into the social graph. The structured data you provide via the Open Graph Protocol defines how your page will be represented on Facebook.
+<li><strong>Extra Cache plugin.</strong></li>
+<li>And more...</li>
+</ul>
+<h2>Buy this template Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here:</h2>
+<p><a class="btn" title="Buy this template with Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here!" href="http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template" target="_blank">Quickstart Package - Buy Now (only 29 USD)</a></p>
+<h2><strong>More information on <a href="http://JooThemes.net/" target="_blank">http://JooThemes.net</a></strong></h2>
+<img src="../templates/joothemes-it-free/images/modules.png" align="left" hspace="10" style="padding-top:10px;"/>
+</div>
+	]]></description>
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+		<folder>js</folder>
+		<folder>scss</folder>
+		<folder>vendor</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>social.php</filename>
+		<filename>slideshow.php</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>template_preview.png</filename>
+	</files>
+    <positions>
+		<position>navigation</position>
+		<position>fullwidth</position>
+		<position>feature</position>
+    <position>breadcrumbs</position>
+    <position>right</position>
+    <position>content-top</position>
+    <position>content-bottom</position>
+    <position>bottom</position>
+		<position>bottom_team</position>
+		<position>bottom_gallery</position>
+		<position>newsletter</position>
+		<position>footer-logo</position>
+		<position>box1</position>
+		<position>box2</position>
+		<position>box3</position>
+		<position>box4</position>
+		<position>box5</position>
+		<position>box6</position>
+		<position>box7</position>
+		<position>box8</position>
+		<position>parallax</position>
+    <position>panelnav</position>
+		<position>debug</position>
+		<position>footer1</position>
+		<position>footer2</position>
+		<position>footer3</position>
+	  <position>top_about</position>
+		<position>top_about2</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+			<field type="spacer" class="text" label="This is Free Lite Version JooThemes IT Agency Joomla 3 Template" />
+			<field type="spacer" class="text" label="&lt;a href='http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template' target='_blank'&gt;&lt;b style='color:red;text-decoration: underline'&gt;Get this template Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here!&lt;/b&gt;&lt;/a&gt;" />
+				<field name="rightColumnWidth" type="list" default="3" label="Right Column Width" description="Choose a width for your right column">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<!-- SHOW FRONTPAGE-->
+				<field name="frontpageshow" type="radio" class="btn-group" default="0" label="Show FrontPage Articles" description="Show FrontPage Articles">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- SUPERFISH-->
+				<field name="superfish" type="list" default="yes" label="Superfish Menu Effect" description="Enable or disable Supperfish effect for main navigation menu. This requires jQuery plugin." filter="word">
+					<option value="yes">Enable</option>
+					<option value="no">Disable</option>
+				</field>
+
+				<!-- MODERNIZR-->
+				<field name="modernizr" type="radio" class="btn-group" default="0"
+					label="Modernizr"
+					description="Enable JavaScript modernizr.js in head">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- FONT-AWESOME -->
+				<field name="fontawesome" type="radio" class="btn-group" default="1"
+					label="Font Awesome"
+					description="Enable Font Awesome for better icons in Bootstrap">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- PIE-->
+				<field name="pie" type="radio" class="btn-group" default="0"
+					label="PIE"
+					description="Enable PIE (CSS3 for IE 9+8)">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- MATERIAL DESIGN-->
+				<field name="materialdesign" type="radio" class="btn-group" default="0"
+					label="Material Design"
+					description="Enable Material Design">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!-- SASS-->
+				<field name="compile_sass" type="radio" class="btn-group" default="0"
+					label="Compile Sass"
+					description="Do you want to enable Sass compilation)">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<!-- LOGO-->
+			<fieldset  name="logo" type="upload_func" label="Logo">
+			<field type="spacer" class="text" label="This is Free Lite Version JooThemes IT Agency Joomla 3 Template" />
+			<field type="spacer" class="text" label="&lt;a href='http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template' target='_blank'&gt;&lt;b style='color:red;text-decoration: underline'&gt;Get this template Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here!&lt;/b&gt;&lt;/a&gt;" />
+					<field name="logo_file" type="media" label="Select your logo:" default="templates/joothemes-it-free/images/logo.png"></field>
+					<field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.joothemes.net" default="index.php"></field>
+					<field name="logo_width" type="text" label="Logo width:" description="Example: 257" default="200"></field>
+					<field name="logo_height" type="text" label="Logo height:" description="Example: 54" default="73"></field>
+			</fieldset>
+			<!-- LAYOUT -->
+
+			<fieldset name="slider" description="" label="Slider">
+            <field type="spacer" class="text" label="This is Free Lite Version JooThemes IT Agency Joomla 3 Template" />
+			<field type="spacer" class="text" label="&lt;a href='http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template' target='_blank'&gt;&lt;b style='color:red;text-decoration: underline'&gt;Get this template Premium Version with Quickstart Package, Unite Revolution Slideshow, 650+ Google Fonts, footer links removal, extra modules, support and more options from here!&lt;/b&gt;&lt;/a&gt;" />
+
+				<field name="menuid" type="menuitem"  multiple="true" size="10" default="1" label="Show/Hide Slideshow" description="Select Menu where to show the slideshow" >
+							<option value="0">- Hide Slideshow -</option>
+							<option value="1">- Show Homepage -</option>
+						</field>
+				<field name="animation" type="list" default="slide" label="Slideshow Animation" description="Choose the animation type for the slideshow" filter="word">
+							<option value="fade">Fade</option>
+							<option value="slide">Slide</option>
+				</field>
+						<!-- SLIDE 1 -->
+				<field type="spacer" name="&lt;h3 class=&quot;sub-heading&quot;&gt;Slide 1&lt;/h3&gt;" />
+				<field name="Caption1" label="Slajd 1" type="textarea" filter="safehtml"  cols="80" rows="10" default="&lt;h1&gt;Premium&lt;br /&gt; QuickStart Package&lt;/h1&gt; &lt;p&gt;Ready to use after installation!&lt;/p&gt; &lt;a href=&quot;http://joothemes.net/responsive-joomla-templates/itagency-free-joomla-template&quot;&gt;Buy Quickstart&lt;/a&gt; &lt;a class=&quot;border&quot; href=&quot;http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template&quot;&gt;Download Free Template&lt;/a&gt;
+" description="Add caption here. HTML allowed." />
+				<!-- SLIDE 2 -->
+				<field type="spacer" name="&lt;h3 class=&quot;sub-heading&quot;&gt;Slide 2&lt;/h3&gt;" />
+				<field name="Caption2" label="Slajd 2" type="textarea" filter="safehtml"  cols="80" rows="10" default="&lt;h1&gt;IT Agency&lt;br&gt;Joomla Template&lt;/h1&gt; &lt;p&gt;Free Joomla 3.9 Theme&lt;/p&gt; &lt;a href=&quot;http://joothemes.net/responsive-joomla-templates/itagency-free-joomla-template&quot; &gt;Purchase Quickstart&lt;/a&gt; &lt;a class=&quot;border&quot; href=&quot;http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template&quot; &gt;Download Free Version&lt;/a&gt;
+"  description="Add  caption here. HTML allowed." />
+				<!-- SLIDE 3 -->
+				<field type="spacer" name="&lt;h3 class=&quot;sub-heading&quot;&gt;Slide 3&lt;/h3&gt;" />
+				<field name="Caption3" label="Slajd 3" type="textarea" filter="safehtml"  cols="80" rows="10" default="" description="Add caption here. HTML allowed." />
+
+				<field type="spacer" name="&lt;h3 class=&quot;sub-heading&quot;&gt;Slide 4&lt;/h3&gt;" />
+				<field name="Caption4" label="Slajd 4" type="textarea" filter="safehtml"  cols="80" rows="10" default="" description="Add  caption here. HTML allowed." />
+
+				<field type="spacer" name="&lt;h3 class=&quot;sub-heading&quot;&gt;Slide 5&lt;/h3&gt;" />
+				<field name="Caption5" label="Slajd 5" type="textarea" filter="safehtml"  cols="80" rows="10" default="" description="Add  caption here. HTML allowed." />
+
+				</fieldset>
+
+<fieldset name="gfont" description="" label="Google Fonts">
+<field type="spacer" class="text" label="This is Free Lite Version JooThemes IT Agency Joomla 3 Template" />
+<field type="spacer" class="text" label="&lt;a href='http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template' target='_blank'&gt;&lt;b style='color:red;text-decoration: underline'&gt;Get this template Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here!&lt;/b&gt;&lt;/a&gt;" />
+<field name="googleFontBody" class="" type="list" default="Poppins" label="Choose Google Font mainbody text" description="You change the font for main text body." >
+<option value="Poppins">Poppins</option>
+</field>
+<field name="googleFont" class="" type="list" default="Poppins" label="Choose Google Font" description="You change the font for headers and main menu." >
+<option value="Poppins">Poppins</option>
+</field>
+<field name="googleFontCharacter" class="" type="text" default="latin,latin-ext" label="Choose the character sets you want:" description="You can use (one or more, each separated by commas): latin,latin-ext,cyrillic,cyrillic-ext,greek,greek-ext,vietnamese,khmer,devanagari. IMPORTANT! If you are not sure if the font supports your language, refer to https://www.google.com/fonts.">
+</field>
+<field name="googleFontWeight" class="" type="text" default="400,700" label="Font weight:" description="You can use (one or more, each separated by commas): 300,400,700. IMPORTANT! If you are not sure if the font supports weight, refer to https://www.google.com/fonts.">
+</field>
+</fieldset>
+
+	  <!-- PATTERN -->
+      <fieldset name="Social" label="Social Options">
+	  <field type="spacer" class="text" label="This is Free Lite Version JooThemes IT Agency Joomla 3 Template" />
+	  <field type="spacer" class="text" label="&lt;a href='http://joothemes.net/responsive-joomla-templates/it-agency-free-joomla-template' target='_blank'&gt;&lt;b style='color:red;text-decoration: underline'&gt;Get this template Premium Version with Quickstart Package, 650+ Google Fonts, footer links removal, Unite Revolution Slideshow, extra modules, support and more options from here!&lt;/b&gt;&lt;/a&gt;" />
+      <field name="SocialLink1" label="&lt;div class=&quot;social_1&quot;&gt;Facebook&lt;/div&gt;" type="text" default="" description="Add URL here. (ie: http://facebook.com/user.name)" />
+ 			<field name="SocialLink2" label="&lt;div class=&quot;social_2&quot;&gt;Twitter&lt;/div&gt;" type="text" default="" description="Add URL here. (ie: http://twitter/username)" />
+ 			<field name="SocialLink3" label="&lt;div class=&quot;social_3&quot;&gt;Google&lt;/div&gt;" type="text" default="" description="Add URL here." />
+ 			<field name="SocialLink4" label="&lt;div class=&quot;social_4&quot;&gt;Youtube&lt;/div&gt;" type="text" default="" description="Add URL here." />
+ 			<field name="SocialLink5" label="&lt;div class=&quot;social_5&quot;&gt;Vimeo&lt;/div&gt;" type="text" default="" description="Add URL here." />
+ 			<field name="SocialLink6" label="&lt;div class=&quot;social_6&quot;&gt;Linkedin&lt;/div&gt;" type="text" default="" description="Add URL here." />
+ 			<field name="SocialLink7" label="&lt;div class=&quot;social_7&quot;&gt;Instagram&lt;/div&gt;" type="text" default="" description="Add URL here." />
+       </fieldset>
+			</fields>
+
+	</config>
+</extension>

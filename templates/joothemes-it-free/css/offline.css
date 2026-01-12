@@ -1,0 +1,105 @@
+/*******************************************************************************************
+
+@copyright	Copyright (C) 2018 JooThemes.net
+
+http://joothemes.net
+
+*******************************************************************************************/
+
+body {
+    font-size: 18px;
+    color: #fff;
+    line-height: 24px;
+    background-color: #39c0fa
+}
+#offline{text-align: center; margin: auto;   background-color: #27bdfa padding: 15px; max-width: 500px;}
+
+a {
+
+      color: #000;
+      text-decoration: underline;
+}
+
+a:focus, a:hover {
+  text-decoration: underline;
+
+
+}
+
+h1 {
+    color: #fff;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 0px;
+    margin: 0px;
+    border: none;
+}
+
+h2 {
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+    margin: 0;
+
+}
+
+h3 {
+    font-size: 30px;
+    color: #000;
+}
+
+#container h3 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+}
+
+.btn {
+    position: relative;
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 0!important;
+
+    padding: 8px 15px;
+    background-color: #0597d2;
+    color: #fff;
+
+
+}
+
+/*** end footer-map  ***/
+
+#offline #frame input.inputbox{
+	background-color:#def5fe;
+	color: #000;
+  border: 3px solid #39c0fa;
+	font-size: 18px;
+  border-radius: 0!important;
+}
+
+#offline .btn {
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    float: none;
+}
+
+.btn-margin {
+    margin-top: -45px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+#offline  .btn-primary:hover, .btn:hover, #offline .btn-info:hover {
+    background: #fff;
+    color: #222;
+
+}
+#system-message .alert-warning{background-color: #fff; color: #222;}

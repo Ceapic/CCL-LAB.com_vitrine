@@ -1,0 +1,78 @@
+/*******************************************************************************************
+
+@copyright	Copyright (C) 2018 JooThemes.net
+
+http://joothemes.net
+
+*******************************************************************************************/
+
+
+body {
+   padding: 0 20px;
+}
+#error{text-align: center; margin: auto; background-color: #1874c1; padding: 15px; max-width: 500px;}
+
+a {
+
+      text-decoration: none;
+}
+
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+#mailto-window{
+	position: relative;
+}
+
+#mailto-window h2{
+	font-size: 18px; font-weight: 600; margin-top: 0;
+}
+
+.mailto-close{
+   text-align: right; position: absolute; top: 15px; right: 0; line-height: normal;
+}
+.mailto-close a{font-size: 14px; color: #111;}
+#mailto-window label{float: left;}
+#mailto-window input{width: 60%; float: right;}
+#mailto-window .formelm{display: block; margin-bottom: 10px; float: left; width: 100%;}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    padding: 3px;
+}
+
+label{
+	margin: 5px 0 0 0;
+}
+
+#print button.btn{
+	float: left; margin-top: 28px;
+}
+
+#print button.button{
+	float: right;
+}
+
+button{
+      background: #39c0fa;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 13px 30px;
+      line-height: 22px;
+      border-radius: 30px;
+      margin: 20px 10px;
+      display: inline-block;
+}
+
+#print button.button{
+	background: #ccc;
+}
+
+
+button:hover{  
+      -webkit-box-shadow: 0px 0px 21px 0px rgba(57,192,250,0.65);
+      -moz-box-shadow: 0px 0px 21px 0px rgba(57,192,250,0.65);
+      box-shadow: 0px 0px 21px 0px rgba(57,192,250,0.65);
+  }
+ 

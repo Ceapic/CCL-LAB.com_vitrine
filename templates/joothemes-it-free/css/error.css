@@ -1,0 +1,58 @@
+/*******************************************************************************************
+
+Transport Free Joomla! 3 Responsive Template - April 2017
+Package tpl-joothemes-transport-free-j3.zip
+Version 1.0
+
+@copyright	Copyright (C) 2017 JooThemes.net
+
+http://joothemes.net
+
+*******************************************************************************************/
+
+
+body {
+    font-size: 18px;
+    color: #fff;
+    line-height: 24px;
+    background-color: #39c0fa;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+#error{text-align: center; margin: auto; background-color: #39c0fa; padding: 15px; max-width: 500px;}
+
+a {
+
+      color: #000;
+      text-decoration: underline;
+}
+
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+    color: #fff;
+    font-size: 180px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 0px;
+    margin: 0px;
+    line-height: 180px;
+}
+
+h2 {
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+
+}
+
+p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+}
+ol{text-align: left; color: #fff}
+li{ font-size: 20px; color: #fff; }

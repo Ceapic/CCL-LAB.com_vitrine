@@ -1,0 +1,282 @@
+const plg_system_eprivacy_class = function(){
+    const root = this;
+    this.targets = {};
+    this.modal = false;
+    const construct = function(){
+        Object.assign(root.targets, Joomla.getOptions('plg_system_eprivacy'));
+        if(!['0','1'].includes(root.getCookie('plg_system_eprivacy'))){
+            root.display();
+        }
+        let privacyLinks = document.querySelectorAll('.plg_system_eprivacy_privacy');
+        if(privacyLinks.length > 0){
+            privacyLinks.forEach(function(link){
+                link.addEventListener('click', function(event){
+                    event.preventDefault();
+                    root.display();
+                });
+            });
+        }
+    }
+    this.setCookie = function(name, value, days){
+        let expires = "";
+        if(days){
+            let date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    this.getCookie = function(name,defaultValue=false){
+        return document.cookie.match('(^|;)\\s*'+name+'\\s*=\\s*([^;]+)')?.pop() || defaultValue;
+    }
+    this.eraseCookie = function(name){
+        root.setCookie(name, "", -1);
+    }
+    this.display = function(){
+        switch(root.targets.plg_system_eprivacy.display) {
+            case 'modal':
+                if(!root.modal){
+                    root.initModal();
+                }
+                root.displayModal();
+                break;
+            case 'alert':
+                root.displayAlert();
+                break;
+        }
+    }
+    this.initModal = function(){
+        let element = document.getElementById('plg_system_eprivacy_modal');
+        root.modal = new bootstrap.Modal(element);
+        let acceptButton = document.querySelector('#plg_system_eprivacy_modal button.accept');
+        acceptButton.addEventListener('click', function(){
+            root.setCookie('plg_system_eprivacy', 1, 365);
+            root.modal.hide();
+            root.accept();
+        });
+        let declineButton = document.querySelector('#plg_system_eprivacy_modal button.decline');
+        declineButton.addEventListener('click', function(){
+            root.setCookie('plg_system_eprivacy', 0, 365);
+            Object.getOwnPropertyNames(root.targets).forEach(function(target){
+                if(target === 'plg_system_eprivacy'){
+                    return;
+                }
+                root.eraseCookie(target+'_consent');
+            });
+            root.modal.hide();
+            root.decline();
+        });
+        document.querySelectorAll('#plg_system_eprivacy_modal i[data-bs-toggle="tooltip"]').forEach(function(element){
+            new bootstrap.Tooltip(element);
+        });
+    }
+    this.displayModal = function(){
+        if(root.modal){
+            document.querySelectorAll('#plg_system_eprivacy_modal input[type="checkbox"]').forEach(function(input){
+                if((root.targets[input.dataset.plugin].mandatory??[]).includes(input.dataset.option)??false){
+                    input.disabled = true;
+                }
+                input.checked = true;
+            });
+            root.modal.show();
+        }
+    }
+    this.displayAlert = function(){
+        if(document.getElementById('plg_system_eprivacy_alert')){
+            return;
+        }
+        let container = document.getElementById('system-message-container');
+        let alert = root.newElement('div',['alert','alert-info','row']);
+        alert.id = 'plg_system_eprivacy_alert';
+        let messageBox = root.newElement('div',['col','d-flex','flex-column','justify-content-between']);
+        alert.appendChild(messageBox);
+        let buttonBox = root.newElement('div',['col-lg-2','text-center','d-flex','flex-column']);
+        alert.appendChild(buttonBox);
+
+        let consentIconStack = root.newElement('span',['fa-stack','fa-2x','mx-auto','d-none','d-lg-block']);
+        let consentIcon = root.newElement('i',['fas','fa-shield','fa-stack-2x','text-dark']);
+        consentIconStack.appendChild(consentIcon);
+        let consentIconCheck = root.newElement('i',['fas','fa-user','fa-stack-1x','text-light']);
+        consentIconStack.appendChild(consentIconCheck);
+        buttonBox.appendChild(consentIconStack);
+
+        let accept = root.acceptButton(['btn','btn-success','mt-1','w-100']);
+        accept.addEventListener('click', function(){
+            alert.remove();
+        });
+        buttonBox.appendChild(accept);
+        let decline = root.declineButton(['btn','btn-danger','mt-1','w-100']);
+        decline.addEventListener('click', function(){
+            alert.remove();
+        });
+        buttonBox.appendChild(decline);
+        let h5 = root.newElement('h5');
+        h5.innerText = Joomla.Text._('PLG_SYSTEM_EPRIVACY_TITLE');
+        messageBox.appendChild(h5);
+
+        let p = document.createElement('p');
+        let message = Joomla.Text._('PLG_SYSTEM_EPRIVACY_MESSAGE')
+        p.innerText = message;
+        messageBox.appendChild(p);
+
+        let detailsAccordion = root.newElement('div',['accordion','accordion-flush']);
+        detailsAccordion.id = 'plg_system_eprivacy_details';
+        messageBox.appendChild(detailsAccordion);
+        let accordionItem = root.newElement('div',['accordion-item']);
+        detailsAccordion.appendChild(accordionItem);
+        let accordionHeader = root.newElement('div',['accordion-header']);
+        accordionHeader.id = 'plg_system_eprivacy_details_header';
+        accordionItem.appendChild(accordionHeader);
+        let accordionButton = root.newElement('button',['accordion-button','collapsed']);
+        accordionButton.type = 'button';
+        accordionButton.setAttribute('data-bs-toggle','collapse');
+        accordionButton.setAttribute('data-bs-target','#plg_system_eprivacy_details_content');
+        accordionButton.setAttribute('aria-expanded','false');
+        accordionButton.setAttribute('aria-controls','plg_system_eprivacy_details_content');
+        accordionButton.innerText = Joomla.Text._('PLG_SYSTEM_EPRIVACY_DETAILS');
+        accordionHeader.appendChild(accordionButton);
+        let accordionContent = root.newElement('div',['accordion-collapse','collapse']);
+        accordionContent.id = 'plg_system_eprivacy_details_content';
+        accordionContent.setAttribute('aria-labelledby','plg_system_eprivacy_details_header');
+        accordionContent.setAttribute('data-bs-parent','#plg_system_eprivacy_details');
+        accordionItem.appendChild(accordionContent);
+        let accordionBody = root.typeList();
+        accordionContent.appendChild(accordionBody);
+
+        container.appendChild(alert);
+    }
+    this.typeList = function(){
+        let accordionBody = root.newElement('div',['accordion-body']);
+        let types = root.getTypes();
+        let typeTitle = '';
+        let listflag = false;
+        let ul = document.createElement('ul');
+        ul.classList.add('list-unstyled');
+        types.forEach(function(typeset){
+            let type = typeset.split('.')[0];
+            let constant = typeset.split('.')[1];
+            if(typeTitle !== type){
+                if(listflag){
+                    accordionBody.appendChild(ul);
+                    ul = root.newElement('ul',['list-unstyled']);
+                }
+                listflag = true;
+                typeTitle = type;
+                let h6 = root.newElement('h6');
+                h6.innerText = Joomla.Text._((type+'_SCRIPT').toUpperCase());
+                accordionBody.appendChild(h6);
+            }
+            let li = root.newElement('li');
+            let formCheck = root.newElement('div',['form-check']);
+            li.appendChild(formCheck);
+            let input = root.newElement('input',['form-check-input']);
+            input.type = 'checkbox';
+            input.id = type+'-'+constant;
+            input.checked = true;
+            if((root.targets[type].mandatory??[]).includes(constant)??false){
+                input.disabled = true;
+            }
+            formCheck.appendChild(input);
+            let label = root.newElement('label',['form-check-label']);
+            label.setAttribute('for',input.id);
+            label.innerText = Joomla.Text._((type+'_SCRIPT_'+constant).toUpperCase());
+            let infoIcon = root.newElement('i',['fas','fa-info-circle','ms-1']);
+            infoIcon.setAttribute('data-bs-toggle','tooltip');
+            infoIcon.setAttribute('data-bs-placement','top');
+            let desc = Joomla.Text._((type+'_SCRIPT_'+constant+'_DESC').toUpperCase());
+            if(input.disabled === true){
+                desc = Joomla.Text._('PLG_SYSTEM_EPRIVACY_MANDATORY')+': '+desc;
+            }
+            infoIcon.setAttribute('title',desc);
+            label.appendChild(infoIcon);
+            new bootstrap.Tooltip(infoIcon);
+            formCheck.appendChild(label);
+            ul.appendChild(li);
+        });
+        if(listflag){
+
+            accordionBody.appendChild(ul);
+        }
+        return accordionBody;
+    }
+    this.newElement = function(type, classes=[]){
+        let element = document.createElement(type);
+        classes.forEach(function(classname){
+            element.classList.add(classname);
+        });
+        return element;
+    }
+    this.acceptButton = function(classes){
+        let button = root.newElement('button',classes);
+        button.textContent = Joomla.Text._('PLG_SYSTEM_EPRIVACY_ACCEPT');
+        button.addEventListener('click', function(){
+            root.setCookie('plg_system_eprivacy', 1, 365);
+            root.accept();
+        });
+        return button;
+    }
+    this.declineButton = function(classes){
+        let button = root.newElement('button',classes);
+        button.textContent = Joomla.Text._('PLG_SYSTEM_EPRIVACY_DECLINE');
+        button.addEventListener('click', function(){
+            root.setCookie('plg_system_eprivacy', 0, 365);
+            Object.getOwnPropertyNames(root.targets).forEach(function(target){
+                if(target === 'plg_system_eprivacy'){
+                    return;
+                }
+                root.eraseCookie(target+'_consent');
+            });
+            root.decline();
+        });
+        return button;
+    }
+    this.getTypes = function(){
+        let types = [];
+        Object.getOwnPropertyNames(root.targets).forEach(function(target){
+            if(target === 'plg_system_eprivacy'){
+                return;
+            }
+            let o = root.targets[target].consent;
+            let consents = Object.getOwnPropertyNames(o);
+            consents.forEach(function(consent){
+                types.push(target+'.'+consent);
+            });
+        });
+        return types;
+    }
+    this.accept = function(){
+        Object.getOwnPropertyNames(root.targets).forEach(function(target){
+            if(target === 'plg_system_eprivacy'){
+                return;
+            }
+            let o = root.targets[target];
+            Object.getOwnPropertyNames(o.consent).forEach(function(consent){
+                let input = document.getElementById(target+'-'+consent);
+                if(!input.checked){
+                    o.consent[consent] = 'denied';
+                } else {
+                    o.consent[consent] = 'granted';
+                }
+            });
+            root.setCookie(target+'_consent', JSON.stringify(o.consent), 365);
+            if(o.function === 'gtag'){
+                root.gtag(o.consent);
+            }
+        });
+        window.dispatchEvent(new Event('plg_system_eprivacy_accepted'));
+    }
+    this.decline = function(){
+        window.dispatchEvent(new Event('plg_system_eprivacy_declined'));
+    }
+    this.gtag = function(o){
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'update', o);
+    }
+
+    construct();
+    return root;
+}
+window.addEventListener('DOMContentLoaded', function(){
+    new plg_system_eprivacy_class();
+});

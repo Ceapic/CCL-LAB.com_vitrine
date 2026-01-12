@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>PLG_SIMPLE_COOKIE_CONSENT</name>
+	<author>SimpleTools.nl</author>
+	<creationDate>December 2019</creationDate>
+	<copyright>Copyright (C) 2019 SimpleTools.nl</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@SimpleTools.nl</authorEmail>
+	<authorUrl>www.SimpleTools.nl</authorUrl>
+	<version>1.0.2</version>
+	<description>PLG_SIMPLE_COOKIE_CONSENT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="simple_cookie_consent">simple_cookie_consent.php</filename>
+		<filename>html.css</filename>
+		<filename>html.js</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_simple_cookie_consent.ini</language>
+		<language tag="en-GB">en-GB.plg_system_simple_cookie_consent.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="simple_gdpr_cookie_text"
+						type="textarea"
+						label="PLG_SIMPLE_COOKIE_CONSENT_COOKIE_TEXT"
+						default="We use cookies to improve our service for you. You can find more information from our &lt;a href=&quot;CHANGE_THIS_WITH_YOUR_PRIVACY_POLICY_URL&quot;&gt;privacy policy&lt;/a&gt;"
+						class="span12"
+						rows="7"
+						cols="20"
+						filter="RAW"
+				/>
+
+				<field
+						name="simple_gdpr_cookie_btn_text"
+						type="textarea"
+						label="PLG_SIMPLE_COOKIE_CONSENT_COOKIE_BTN_TEXT"
+						default="Accept Cookies"
+						class="span12"
+						rows="7"
+						cols="20"
+						filter="html"
+				/>
+
+				<field
+						name="simple_jquery"
+						type="list"
+						label="PLG_SIMPLE_COOKIE_CONSENT_COOKIE_JQUERY"
+						description="PLG_SIMPLE_COOKIE_CONSENT_COOKIE_JQUERY_DESC"
+						default="no"
+				>
+					<option value="yes">PLG_SIMPLE_COOKIE_CONSENT_COOKIE_JQUERY_YES</option>
+					<option value="no">PLG_SIMPLE_COOKIE_CONSENT_COOKIE_JQUERY_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="SIMPLE_COOKIE_CONSENT">https://www.simpletools.nl/etc/files/simple_cookie_consent_joomla.xml</server>
+	</updateservers>
+
+</extension>

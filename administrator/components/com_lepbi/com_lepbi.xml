@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>com_lepbi</name>
+    <author>ali</author>
+    <creationDate>2025-02-21</creationDate>
+    <version>1.0.0</version>
+    <description>Example MVC lepbi component for Joomla 3.9</description>
+    
+    <!-- Files for the site (front-end) -->
+    <files folder="site">
+        <filename>lepbi.php</filename>
+        <filename>controller.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    
+    <!-- Files for the administrator (back-end) -->
+    <administration>
+        <menu>lepbi</menu>
+        <files folder="admin">
+            <filename>lepbi.php</filename>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+</extension>
