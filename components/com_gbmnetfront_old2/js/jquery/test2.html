@@ -1,0 +1,323 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	  <link rel="stylesheet" href="test2_fichiers/font-awesome.css">
+	  <link rel="stylesheet" href="test2_fichiers/template.css">
+ <style>
+
+	
+	
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 5px;
+		max-width:300px;
+	}
+
+	/* Add rounded corners to the top left and the top right corner of the image */
+	.card img {
+		max-width:300px;
+		border-radius: 5px 5px 0 0;
+	}
+	
+	/* On mouse-over, add a deeper shadow */
+	.card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+
+	/* Add some padding inside the card container */
+	.container {
+		padding: 2px 16px;
+	}
+	
+	.encart{
+	  cursor: pointer;
+	  padding: 0;
+	  min-height: 185px;
+	  border-radius: 5px;
+	  border: 1px solid #bdc3c7;
+
+	  text-align: left;
+
+	  -webkit-transition: all 0.5s ease;
+	  -moz-transition: all 0.5s ease;
+	  -o-transition: all 0.5s ease;
+	  -ms-transition: all 0.5s ease;
+	  transition: all 0.5s ease;
+
+	  -moz-box-shadow: 0px 0px 10px 0px #bdc3c7;
+	  -webkit-box-shadow: 0px 0px 10px 0px #bdc3c7;
+	  -o-box-shadow: 0px 0px 10px 0px #bdc3c7;
+	  box-shadow: 0px 0px 10px 0px #bdc3c7;
+	  filter:progid:DXImageTransform.Microsoft.Shadow(color=#bdc3c7, Direction=NaN, Strength=10);
+	}
+	
+	.float-left{
+		float: left;
+	}
+	
+	p.lead{
+	  font-size: 28px;
+	  line-height: 1.4642745000000001;
+	  font-weight: 300;
+	}
+
+	.float_left{
+	  float: left;
+	}
+
+	.float_right{
+	  float: right;
+	}
+
+	.float_end{
+	  clear: both;
+	}
+
+	.margin-left{
+	  margin-left: 10px;
+	}
+
+	.margin-top{
+	  margin-top: 10px;
+	}
+
+	.margin-right{
+	  margin-right: 10px;
+	}
+
+	.margin-bottom{
+	  margin-bottom: 10px;
+	}
+
+	.no-margin{
+	  margin: 0;
+	}
+
+	.no-decoration{
+	  text-decoration: none;
+	}
+
+	.text-center{
+	  text-align: center;
+	}
+
+	.centered{
+	  margin: 0 auto;
+	}
+
+	.justify{
+	  text-align: justify;
+	  text-justify: inter-word;
+	}
+
+	p.justify{
+	  font-weight: normal;
+	  margin: 10px;
+	  margin-top: 20px;
+	}
+
+	.bold{
+	  font-weight: bold;
+	}
+
+	alinea{
+	  display: inline-block;
+	  width: 20px;
+	  height: 10px;
+	}
+
+	label{
+	  font-weight: normal;
+	}
+
+
+
+
+
+
+
+/* SECTION : Contenu
+-------------------------------------------------- */
+
+#contenu{
+  padding: 20px;
+}
+
+
+/* Encart */
+.encart{
+  cursor: pointer;
+  padding: 0;
+  min-height: 185px;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+
+  text-align: left;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  -moz-box-shadow: 0px 0px 10px 0px #bdc3c7;
+  -webkit-box-shadow: 0px 0px 10px 0px #bdc3c7;
+  -o-box-shadow: 0px 0px 10px 0px #bdc3c7;
+  box-shadow: 0px 0px 10px 0px #bdc3c7;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#bdc3c7, Direction=NaN, Strength=10);
+}
+
+.encart.rouge{
+  border: 1px solid #c0392b;
+
+  -moz-box-shadow: 0px 0px 10px 0px #c0392b;
+  -webkit-box-shadow: 0px 0px 10px 0px #c0392b;
+  -o-box-shadow: 0px 0px 10px 0px #c0392b;
+  box-shadow: 0px 0px 10px 0px #c0392b;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0392b, Direction=NaN, Strength=10);
+}
+
+.encart .encart-head{
+  padding: 0;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #27ae60;
+
+  font-weight: bold;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.encart.rouge .encart-head{
+  border-bottom: 1px solid #c0392b;
+}
+
+.encart .encart-head .fa{
+  display: inline-block;
+
+  width: 50px;
+  height: 40px;
+
+  margin-right: 10px;
+  padding-left: 0;
+
+  text-align: center;
+  font-size: 30px;
+  color: white;
+
+  background-color: #27ae60;
+  border-radius: 3px 0 0 0;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.encart.rouge .encart-head .fa{
+  background-color: #c0392b;
+}
+
+.encart:hover{
+  -moz-box-shadow: 0px 0px 10px 0px #27ae60;
+  -webkit-box-shadow: 0px 0px 10px 0px #27ae60;
+  -o-box-shadow: 0px 0px 10px 0px #27ae60;
+  box-shadow: 0px 0px 10px 0px #27ae60;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#27ae60, Direction=NaN, Strength=10);
+}
+
+.encart:hover .encart-head{
+  background-color: #27ae60;
+  color: white;
+}
+
+.encart.rouge:hover .encart-head{
+  background-color: #c0392b;
+}
+
+.encart:hover .encart-head .fa{
+  background-color: white;
+  color: #27ae60;
+}
+
+.encart.rouge:hover .encart-head .fa{
+  color: #c0392b;
+}
+
+.card {
+	min-height: 185px;
+	border:1px solid;
+	border-radius: 15px;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+}
+
+.card-head{
+	height: 40px;
+	border-bottom: 1px solid #0096D2;
+}
+
+.card-head-text{
+	font-weight: bold;
+	line-height: 40px;
+	font-size: 13px;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	color: #0096D2;
+	vertical-align:middle;
+}
+
+.card-head .fa{
+	font-size: 1px;
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  padding-left: 0;
+
+  text-align: center;
+  font-size: 30px;
+  color: white;
+
+  background-color: #0096D2;
+  border-radius: 15px 0 0 0;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.card-body{
+	width: 100%;
+	padding: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 6px #0096D2;
+}
+
+ </style></head>
+ 
+ 
+ 
+ 
+
+<body><div class="grid4 offset2 card">
+	<div class="card-head align-center"><span class="float_left icon-phone fa">Icon</span><div class="card-head-text">Exploitation</div></div>
+	<div class="card-title align-center">
+		<label><strong>Prise de commandes, organisation des interventions.</strong></label>
+	</div>
+	<div class="card-body">
+		<label class="text margin-top"><strong>Mob :</strong> <a href="tel:+33634610654">06.34.61.06.54</a></label><br>
+		<label class="text"><strong>Email : </strong>&nbsp;<a href="mailto:exploitation@ceapic.fr" target="_top">exploitation@ceapic.fr</a></label>
+	</div>
+</div></body></html>

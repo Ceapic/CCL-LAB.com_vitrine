@@ -5,31 +5,30 @@ defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.calendar');
 
-JHtml::script("components/com_gbmnetfront/js/jquery/jquery-1.12.4.min.js");
-JHtml::script("components/com_gbmnetfront/js/jquery-ui-1.12.1/jquery-ui.min.js");
-JHtml::script("components/com_gbmnetfront/js/jquery-ui-1.12.1/jquery.ui.datepicker-fr.js");
+JHtml::script("components/com_ceapicworld/js/jquery/jquery-1.12.4.min.js");
+JHtml::script("components/com_ceapicworld/js/jquery-ui-1.12.1/jquery-ui.min.js");
+JHtml::script("components/com_ceapicworld/js/jquery-ui-1.12.1/jquery.ui.datepicker-fr.js");
 // JHtml::script("components/com_ceapicworld/js/Canvas/canvasjs.min.js");
-// JHtml::script("components/com_gbmnetfront/js/Chart/Chart.min.js");
+JHtml::script("components/com_ceapicworld/js/Chart/Chart.min.js");
 
-JHtml::stylesheet("components/com_gbmnetfront/js/jquery-ui-1.12.1/jquery-ui.min.css");
-JHtml::stylesheet("components/com_gbmnetfront/css/font-awesome/css/font-awesome.min.css");
+JHtml::stylesheet("components/com_ceapicworld/js/jquery-ui-1.12.1/jquery-ui.min.css");
+JHtml::stylesheet("components/com_ceapicworld/css/font-awesome/css/font-awesome.min.css");
 
-JHtml::script('components/com_gbmnetfront/js/jquery.dataTables.min.js');
-JHtml::stylesheet('components/com_gbmnetfront/css/jquery.dataTables.min.css');
+JHtml::script('components/com_ceapicworld/js/DataTables/media/js/jquery.dataTables.min.js');
+JHtml::stylesheet('components/com_ceapicworld/js/DataTables/media/css/jquery.dataTables.min.css');
 
 // $model = $this->getModel('ceapicworld');  nom model
-require_once(URL_MODELE . "gbmnetFrontModel.php");
-$model = new gbmnetFrontModel;
+require_once(URL_MODELE . "gbmnetworldFront.php");
+$model = new gbmnetworldFront;
 
 $user = JFactory::getUser();
 if ($user->type_client <> 1) die('Restricted access');
 
 $id_client = $user->client;
 $type_client = $user->type_client;
-$token = $model->CreateToken(bin2hex(openssl_random_pseudo_bytes(16)));
+// $token = $model->CreateToken(bin2hex(openssl_random_pseudo_bytes(16)));
 
-$url = $model->GetRemoteToken() . "&task=ListeProcessusClient&id_client=" . $id_client . "&token=" . $token . "&format=raw";
-// var_dump($url);
+$url = $model->GetRemoteToken() . "/index.php?option=com_ceapicworld&task=ListeProcessusClient&id_client=" . $id_client . "&token=" . 2147483647 . "&format=raw";
 $Processus_data = file_get_contents($url);
 
 
@@ -39,16 +38,6 @@ $token_client = md5($id_client . $type_client . $sharingkey);
 
 
 <STYLE type="text/css">
-	#div_liste_strategie {
-		border: none;
-	}
-
-	#main #div_liste_strategie .panel-heading h3 {
-		font-weight: 300;
-		font-size: 24px;
-		line-height: 40px;
-	}
-
 	.filterable {
 		margin-top: 15px;
 	}
@@ -114,7 +103,7 @@ $token_client = md5($id_client . $type_client . $sharingkey);
 	<div class="panel-heading">
 		<h3 class="panel-title">Liste des processus</h3>
 	</div>
-	<!-- <canvas id="myChart" width="400px" height="100px"></canvas> -->
+	<canvas id="myChart" width="400px" height="100px"></canvas>
 	<table id="table_processus" class="table table-striped table-bordered table-hover">
 		<thead>
 			<tr>
@@ -154,8 +143,7 @@ $token_client = md5($id_client . $type_client . $sharingkey);
 
 <script language="javascript" type="text/javascript">
 	jQuery('#table_processus').on('click', '.show_processus', function() {
-		var page = "<?php echo JURI::root(); ?>index.php?option=gmbnetworldFront&task=AfficheRapportFront&format=raw&ref=" + jQuery(this).find(".href").html().replace(" ", "-") + "&id_echantillon=" + jQuery(this).attr("linkechantillon") + "&id_rapport=" + jQuery(this).attr("linkrapport") + "&tokenrapport=" + jQuery(this).attr("hash") + "&id_client=<?php echo $id_client; ?>&type_client=<?php echo $type_client; ?>&tokenclient=<?php echo $token_client; ?>";
-		// alert(page);
+		var page = "<?php echo JURI::root(); ?>index.php?option=gmbnetworldFront&task=AfficheRapport&format=raw&ref=" + jQuery(this).find(".href").html().replace(" ", "-") + "&id_echantillon=" + jQuery(this).attr("linkechantillon") + "&id_rapport=" + jQuery(this).attr("linkrapport") + "&tokenrapport=" + jQuery(this).attr("hash") + "&id_client=<?php echo $id_client; ?>&type_client=<?php echo $type_client; ?>&tokenclient=<?php echo $token_client; ?>";
 		window.open(page, '_blank');
 	});
 
@@ -240,17 +228,17 @@ $token_client = md5($id_client . $type_client . $sharingkey);
 			if (resultat_processus == "INA") inanalysable++;
 		});
 
-		// var ctx = document.getElementById("myChart");
-		// var myChart = new Chart(ctx, {
-		// 	type: 'doughnut',
-		// 	data: {
-		// 		labels: ["Niveau 1 : <100 f/L : " + niveau1 + " mesures - " + Math.round(niveau1 * 100 / count_processus) + "%", "Niveau 2 : 100 à 6000 f/L : " + niveau2 + " mesures - " + Math.round(niveau2 * 100 / count_processus) + "%", "Niveau 3 : 6000 à 25000 F/L : " + niveau3 + " mesures - " + Math.round(niveau3 * 100 / count_processus) + "%", "Hors niveau : > 25000 F/L : " + niveau0 + " mesures - " + Math.round(niveau0 * 100 / count_processus) + "%", "Inanalysable - " + Math.round(inanalysable * 100 / count_processus) + "%"],
-		// 		datasets: [{
-		// 			label: 'Statistique des processus',
-		// 			data: [niveau1, niveau2, niveau3, niveau0, inanalysable],
-		// 			"backgroundColor": ["rgb(54, 162, 235)", "rgb(255, 205, 86)", "rgb(255, 99, 132)", "rgb(0, 0, 0)", "rgb(229, 229, 229)"]
-		// 		}]
-		// 	}
-		// });
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: ["Niveau 1 : <100 f/L : " + niveau1 + " mesures - " + Math.round(niveau1 * 100 / count_processus) + "%", "Niveau 2 : 100 à 6000 f/L : " + niveau2 + " mesures - " + Math.round(niveau2 * 100 / count_processus) + "%", "Niveau 3 : 6000 à 25000 F/L : " + niveau3 + " mesures - " + Math.round(niveau3 * 100 / count_processus) + "%", "Hors niveau : > 25000 F/L : " + niveau0 + " mesures - " + Math.round(niveau0 * 100 / count_processus) + "%", "Inanalysable - " + Math.round(inanalysable * 100 / count_processus) + "%"],
+				datasets: [{
+					label: 'Statistique des processus',
+					data: [niveau1, niveau2, niveau3, niveau0, inanalysable],
+					"backgroundColor": ["rgb(54, 162, 235)", "rgb(255, 205, 86)", "rgb(255, 99, 132)", "rgb(0, 0, 0)", "rgb(229, 229, 229)"]
+				}]
+			}
+		});
 	});
 </script>

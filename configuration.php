@@ -12,17 +12,18 @@ class JConfig {
 	public $secret = 'jf6otUUQAQOUAxfw';
 	public $sharingkey = 'QHXYzA2fQhmtoilrvWSa';
 
-	//BDD VITRINE
+	//INFOS VITRINE
+	public $urlVitrine = 'http://localhost/vitrineJoomla/';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'phpmyadmin';
+	public $user = 'root';
 	//public $password = 'BDDRoot66!';
-	public $password = '';
-	public $db = 'vitrine';
-	public $dbprefix = 'jwrib6_';
+	public $db = 'vitrinelepbi';
+	public $dbprefix = 'mod643_';
+
 
 	//INFOS BACK
-	public $urlBack = 'http://localhost/';
+	public $urlBack = 'http://localhost';
 	public $remotetoken = 'http://localhost';
 	//public $GBMNet_dbprefix = 'mod643_';
 	public $GBMNet_dbprefix = '';

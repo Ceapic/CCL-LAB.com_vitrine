@@ -98,8 +98,8 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 
 <head>
-	<link rel="stylesheet" href="/templates/template_lepbi/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="/templates/template_lepbi/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?php echo JURI::root(); ?>templates/template_lepbi/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo JURI::root(); ?>templates/template_lepbi/css/owl.theme.default.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes" />
 	<meta name="HandheldFriendly" content="true" />
 	<meta name="apple-mobile-web-app-capable" content="YES" />
@@ -116,7 +116,7 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 			</div>
 
 			<div id="logo_position">
-				<img src="/templates\template_lepbi\images\custom_img\image.png" alt="logo" id="logo">
+				<img src="./templates\template_lepbi\images\custom_img\image.png" alt="logo" id="logo">
 				<jdoc:include type="modules" name="position-logo" />
 			</div>
 
@@ -259,7 +259,7 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 		}
 
 
-		function login_vertical(){
+		function login_vertical() {
 
 		}
 		window.onload = login_vertical;

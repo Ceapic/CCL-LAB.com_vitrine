@@ -3,16 +3,13 @@
 defined('_JEXEC') or die;
 require_once(URL_MODELE . "rapport.php");
 $model = new RapportModel;
-class gbmnetBackModel
-{
-	function GetSharingKey()
-	{
+class gbmnetBackModel {
+	function GetSharingKey() {
 		$config = JFactory::getConfig();
 		return $config->get('sharingkey');
 	}
 
-	function CheckRemoteToken($token)
-	{
+	function CheckRemoteToken($token) {
 
 		$config = JFactory::getConfig();
 		$remotetoken = $config->get('frontToken');

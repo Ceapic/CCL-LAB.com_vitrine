@@ -1,0 +1,92 @@
+.GBMNET_SELECT-input {
+    border: 1px solid #aaa;
+    padding: 5px;
+    border-radius: 4px;
+    /* padding-right: 25px; */
+    width:98%;
+}
+
+.GBMNET_SELECT-container {
+    /* margin: auto; */
+    position: relative;
+    color: #000;
+    /* display: inline-block; */
+    /* width:100%; */
+    /* max-width: 100%; */
+}
+
+.GBMNET_SELECT-container.active .GBMNET_SELECT-icon {
+    transform: translateY(-50%) rotate(180deg);
+    transition-duration: 600ms;
+}
+
+.GBMNET_SELECT-icon {
+    transform: translateY(-50%) rotate(0deg);
+    transition-duration: 600ms;
+}
+
+.GBMNET_SELECT-icon {
+    position: absolute;
+    display: flex;
+    /* right: 5px; */
+    right: 1%;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    top: 60%;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.GBMNET_SELECT-options-container {
+    position: absolute;
+    white-space: nowrap;  
+    /* min-width: 100%; */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 9999;
+    display: none;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.GBMNET_SELECT-option-item {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    min-height: 18px;
+}
+
+.GBMNET_SELECT-option-item.selected {
+    background-color: #6796c5;
+    color: #fff;
+}
+
+.GBMNET_SELECT-option-item:hover {
+    background-color: #6796c5;
+    color: #fff;
+}
+
+.GBMNET_SELECT-option-item.highlighted {
+    background-color: #6796c5;
+    color: #fff;
+    border: solid 1px black;
+}
+
+
+.GBMNET_SELECT-optgroup {
+    margin-bottom: 10px;
+}
+.GBMNET_SELECT-optgroup-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.GBMNET_SELECT-option-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.GBMNET_SELECT-option-item.selected {
+    /* background-color: #f0f0f0; */
+}
