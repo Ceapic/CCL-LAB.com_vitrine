@@ -1,0 +1,305 @@
+/* Styles pour le système d'onglets TabSystem */
+
+.tab-container {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Conteneur des boutons d'onglets */
+.tab-header {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Styles des boutons d'onglets */
+.tab-button {
+    flex: 0 1 auto;
+    min-width: 100px;
+    max-width: 200px;
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    border-right: 1px solid #dee2e6;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-button:last-child {
+    border-right: none;
+}
+
+.tab-button:hover {
+    background: #e9ecef;
+    color: #495057;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+.tab-button:hover:first-child {
+    border-left: none;
+}
+
+.tab-button:hover:last-child {
+    border-right: none;
+}
+
+.tab-button.active {
+    color: #007bff;
+    background: #fff;
+    border-bottom-color: #007bff;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    box-shadow: 0 -2px 4px rgba(0, 123, 255, 0.1);
+}
+
+.tab-button.active:first-child {
+    border-left: none;
+}
+
+.tab-button.active:last-child {
+    border-right: none;
+}
+
+.tab-button:disabled,
+.tab-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* .tab-button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
+} */
+
+/* Tooltips pour les boutons avec attribut title */
+.tab-button[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tab-button[title]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Conteneur du contenu des onglets */
+.tab-content-container {
+    position: relative;
+    min-height: 200px;
+}
+
+/* Styles du contenu des onglets */
+.tab-content {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Style des titres dans les contenus d'onglets */
+.tab-content h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #007cba;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    .tab-header {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .tab-button {
+        flex: 0 0 auto;
+        min-width: 120px;
+        max-width: 150px;
+        text-align: center;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 0;
+    }
+    
+    .tab-button.active {
+        border-bottom-color: #007bff;
+        border-left: none;
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .tab-button {
+        min-width: 100px;
+        max-width: 120px;
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+/* Variantes de couleurs */
+.tab-container.tab-primary .tab-button.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.tab-container.tab-success .tab-button.active {
+    color: #28a745;
+    border-bottom-color: #28a745;
+}
+
+.tab-container.tab-warning .tab-button.active {
+    color: #ffc107;
+    border-bottom-color: #ffc107;
+}
+
+.tab-container.tab-danger .tab-button.active {
+    color: #dc3545;
+    border-bottom-color: #dc3545;
+}
+
+.tab-container.tab-info .tab-button.active {
+    color: #17a2b8;
+    border-bottom-color: #17a2b8;
+}
+
+/* Style vertical */
+.tab-container.tab-vertical {
+    display: flex;
+}
+
+.tab-container.tab-vertical .tab-header {
+    flex-direction: column;
+    width: 200px;
+    border-bottom: none;
+    border-right: 1px solid #dee2e6;
+}
+
+.tab-container.tab-vertical .tab-button {
+    text-align: left;
+    border-bottom: none;
+    border-right: 3px solid transparent;
+}
+
+.tab-container.tab-vertical .tab-button.active {
+    border-bottom-color: transparent;
+    border-right-color: #007bff;
+}
+
+.tab-container.tab-vertical .tab-content-container {
+    flex: 1;
+}
+
+/* Style minimal */
+.tab-container.tab-minimal .tab-header {
+    background: transparent;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tab-container.tab-minimal .tab-button {
+    background: transparent;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-container.tab-minimal .tab-button:hover {
+    background: transparent;
+    color: #007bff;
+}
+
+.tab-container.tab-minimal .tab-button.active {
+    background: transparent;
+}
+
+/* Style avec badges */
+.tab-button .badge {
+    display: inline-block;
+    padding: 2px 6px;
+    margin-left: 8px;
+    background: #6c757d;
+    color: white;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
+}
+
+.tab-button.active .badge {
+    background: #007bff;
+}
+
+/* Indicateur de chargement */
+.tab-content.loading {
+    position: relative;
+    min-height: 100px;
+}
+
+.tab-content.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

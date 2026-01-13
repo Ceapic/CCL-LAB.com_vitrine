@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted access');
 
 class GbmnetfrontController extends JControllerLegacy {
 
-    function CheckTokenCEAPIC() {
+    function CheckTokenFront() {
         $app = JFactory::getApplication();
         $input = $app->input;
         $token = $input->get('token', '', 'string');

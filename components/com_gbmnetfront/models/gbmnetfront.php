@@ -1,16 +1,6 @@
 <?php
 defined('_JEXEC') or die;
 
-// jimport('joomla.application.component.modelitem');
-// ModelgbmnetworldFront 
-// extends JModelItem
-//class fantome pour faire fonctionner le MVC Joomla
-class GbmnetfrontModelGbmnetfront extends JModelLegacy {
-	public function getHelloMessage() {
-		return "Hello, Joomla!";
-	}
-}
-
 class Gbmnetfront {
 
 	static function GetSharingKey() {
@@ -52,9 +42,12 @@ class Gbmnetfront {
 		$db->insertObject($dbprefix . 'token', $data, 'id_token');
 		$id_token = $db->insertid();
 
-		$query = "Select *
-				from " . $dbprefix . "token
-				where id_token = " . $id_token;
+		$query = "SELECT 
+					*
+				FROM 
+				" . $dbprefix . "token
+				WHERE
+					id_token = " . $id_token;
 		$db->setQuery($query);
 		$token = $db->loadObjectList();
 
@@ -65,26 +58,27 @@ class Gbmnetfront {
 		$config = JFactory::getConfig();
 		$dbprefix = $config->get('dbprefix');
 
-		$query = "Select *
-				from " . $dbprefix . "token
-				where key_token = '" . $key_token . "'";
+		$query = "SELECT 
+					*
+				FROM 
+				" . $dbprefix . "token
+				WHERE 
+					key_token = '" . $key_token . "' ";
 		$db = JFactory::getDbo();
 		$db->setQuery($query);
 		$token = $db->loadObjectList();
-		// var_dump($token);
-		// echo $token;
-		// die();
-		if (count($token) <> 0) {
+
+		if (count($token) != 0) {
 			$db = JFactory::getDbo();
 			$query = $db->getQuery(true);
 			$conditions = array(
 				$db->quoteName('id_token') . ' = ' . $db->quote($token[0]->id_token)
 			);
-			// $query->delete($db->quoteName('#__token'));
-			// $query->where($conditions);
-			// $db->setQuery($query);
-			// $result = $db->execute();
-			// echo "yes";
+			$query->delete($db->quoteName('#__token'));
+			$query->where($conditions);
+			$db->setQuery($query);
+			$result = $db->execute();
+
 			return "true";
 		} else {
 			// echo "no";
@@ -105,7 +99,6 @@ class Gbmnetfront {
 	}
 
 	static function ChangeClientUser($id_user, $type_client, $id_client) {
-
 		$config = JFactory::getConfig();
 		$dbprefix = $config->get('dbprefix');
 
@@ -136,5 +129,12 @@ class Gbmnetfront {
 		$db = JFactory::getDbo();
 		$db->insertObject('#__user_usergroup_map', $data);
 		return $db->insertid();
+	}
+}
+
+//class fantome pour faire fonctionner le MVC Joomla
+class GbmnetfrontModelGbmnetfront extends JModelLegacy {
+	public function getHelloMessage() {
+		return "Hello, Joomla!";
 	}
 }
